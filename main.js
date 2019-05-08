@@ -20,4 +20,15 @@ submitButton.addEventListener('click', function () {
   event.preventDefault();
   challenger1NameOutput.innerText = challenger1NameInput.value;
   challenger2NameOutput.innerText = challenger2NameInput.value;
-})
+});
+
+var challenger1GuessInput = document.getElementById('challenger1-guess-input');
+var challenger2GuessInput = document.getElementById('challenger2-guess-input');
+var challenger1GuessOutput = document.getElementById('challenger1-guess-output');
+var challenger2GuessOutput = document.getElementById('challenger2-guess-output');
+
+submitButton.addEventListener('click', function () {
+  event.preventDefault();
+  challenger1GuessOutput.innerText = challenger1GuessInput.value;
+  challenger2GuessOutput.innerText = challenger2GuessInput.value;
+});
