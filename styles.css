@@ -147,18 +147,57 @@ main {
   width: 25%;
 }
 
+/*LATEST SCORE FEATURE*/
+
 .latest-score {
   display: flex;
-  height: 150px;
+  flex-wrap: wrap;
   margin: 10px;
+  background-color: #FFFFFF;
+  padding: 10px;
+  border: #D0D2D3 1px solid;
+}
+
+.latest-score-text {
+  width: 100%;
+  font-weight: 800;
+  color: #6E6E6E;
+  font-size: 16px;
 }
 
 .latest-score-left {
   width: 50%;
+  text-align: center;
 }
 
 .latest-score-right {
   width: 50%;
+  text-align: center;
+  border-left: #D0D2D3 1px solid;
+}
+
+.latest-score-names {
+  font-weight: 700;
+  font-size: 14px;
+  color: #6E6E6E;
+}
+
+.current-guess-text {
+  font-weight: 300;
+  font-size: 12px;
+  color: #D0D2D3;
+}
+
+.challenger-latest-score {
+  font-size: 48px;
+  font-weight: 800;
+  color: #F74D9B;
+}
+
+.guess-responses {
+  font-weight: 300;
+  font-size: 13px;
+  color: #D0D2D3;
 }
 
 output {
