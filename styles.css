@@ -1,6 +1,6 @@
-* {
+/** {
   border: grey 1px solid;
-}
+}*/
 
 * {
   box-sizing: border-box;
@@ -81,11 +81,70 @@ main {
   flex-direction: column;
 }
 
+ /*CHALLENGER GUESS FEATURE*/
+
 .challenger-guess-feature {
   display: flex;
-  height: 200px;
   margin: 10px;
-  flex-wrap: wrap;
+  background-color: white;
+  padding: 10px;
+}
+
+.arena {
+  width: 100%;
+}
+
+.min-current-range,
+.max-current-range {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.challengers {
+  display: flex;
+  justify-content: space-between; 
+  padding-bottom: 10px;
+}
+
+.name-inputs,
+.guess-inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+.name-inputs {
+  width: 60%;
+}
+
+.guess-inputs {
+  width: 30%;
+}
+
+.challenger-name {
+  width: 100%;
+}
+
+.challenger-guess-feature-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.bottom-buttons {
+  border-radius: 35px;
+  padding: 6px;
+  font-weight: bold;
+  background-color: #D0D2D3;
+  color: #FFFFFF;
+  width: 25%;
+}
+
+.submit-button {
+  border-radius: 35px;
+  padding: 6px;
+  font-weight: bold;
+  background-color: #6E6E6E;
+  color: #FFFFFF;
+  width: 25%;
 }
 
 .latest-score {
