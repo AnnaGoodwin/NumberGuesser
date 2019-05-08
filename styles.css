@@ -17,10 +17,14 @@ h1 {
   font-weight: 300;
   color: #DD1972;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .sub-headline {
   text-transform: uppercase;
+  color: white;
+  font-weight: 300;
+  text-align: center;
 }
 
 .set-range-feature {
