@@ -23,6 +23,10 @@ h1 {
   text-transform: uppercase;
 }
 
+.set-range-feature {
+  background-color: white;
+}
+
 .set-range-text {
   font-weight: 700;
   color: 404041;
@@ -31,6 +35,11 @@ h1 {
 label {
   /*font-weight: 300;*/
   color: #6E6E6E;
+}
+
+input {
+  border: solid 2px;
+  border-color: #D0D2D3;
 }
 
 .container {
@@ -58,6 +67,10 @@ main {
   flex-direction: column;
   height: 100px;
   margin: 10px;
+  padding: 10px;
+  border: solid 2px;
+  border-color: #D0D2D3;
+
  /* align-items: flex-end;
   display: flex;
   justify-content: space-around;
@@ -79,6 +92,15 @@ main {
 .max-range {
   display: flex;
   flex-direction: column;
+}
+
+.update-button {
+  border-radius: 35px;
+  padding: 6px;
+  font-weight: bold;
+  background-color: #6E6E6E;
+  color: #FFFFFF;
+  width: 20%;
 }
 
  /*CHALLENGER GUESS FEATURE*/
