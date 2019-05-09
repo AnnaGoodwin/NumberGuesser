@@ -39,6 +39,10 @@ h3 {
   /*margin-top: 3px;*/
 }
 
+.number-word {
+  font-weight: 800;
+}
+
 .sub-headline {
   text-transform: uppercase;
   color: white;
@@ -249,11 +253,9 @@ output {
   background-color: #D0D2D3;
 }
 
-.number-word {
-  font-weight: 800;
-}
+/*RESULT CARD*/
 
-.result-card1 {
+.result-card {
   border: #D0D2D3 solid 2px;
   text-align: center;
   width: 90%;

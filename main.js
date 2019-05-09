@@ -2,6 +2,7 @@
 
 var random =  Math.ceil(Math.random() * (100 - 1));
 console.log(random);
+var challenger1Name, challenger2Name;
 
 // MIN/MAX RANGE 
 
@@ -27,8 +28,10 @@ var challenger2NameOutput = document.getElementById('challenger2-name-output');
 
 submitButton.addEventListener('click', function () {
   event.preventDefault();
-  challenger1NameOutput.innerText = challenger1NameInput.value;
-  challenger2NameOutput.innerText = challenger2NameInput.value;
+  challenger1Name = challenger1NameInput.value;
+  challenger2Name = challenger2NameInput.value;
+  challenger1NameOutput.innerText = challenger1Name;
+  challenger2NameOutput.innerText = challenger2Name;
 });
 
 // CHALLENGER GUESS INPUTS/OUTPUTS
@@ -76,6 +79,7 @@ submitButton.addEventListener('click', function () {
     challenger1Feedback.innerText = "That's too high";
   } else {
     challenger1Feedback.innerText = "BOOM!";
+    addCard(challenger1Name);
   }});
 
 submitButton.addEventListener('click', function () {
@@ -86,4 +90,22 @@ submitButton.addEventListener('click', function () {
     challenger2Feedback.innerText = "That's too high";
   } else {
     challenger2Feedback.innerText = "BOOM!";
+    addCard(challenger2Name);
   }});
+
+var cardTemplate = document.querySelector('.result-card-template');
+var cardArea = document.querySelector('.card-container');
+
+function addCard(winner) {
+  var clone = cardTemplate.content.cloneNode(true);
+  cardArea.prepend(clone);
+  var winnerField = document.querySelector('.result-card-winner-name');
+  winnerField.innerText = winner;
+};
+
+submitButton.addEventListener('click', function () {
+  var challenger1NameOnCard = document.querySelector('.result-card-challenger-1-name');
+  var challenger2NameOnCard = document.querySelector('.result-card-challenger-2-name');
+  challenger1NameOnCard.innerText = challenger1NameInput.value;
+  challenger2NameOnCard.innerText = challenger2NameInput.value;
+});
