@@ -14,12 +14,24 @@ body {
   border-color: #6E6E6E;
 }
 
+p {
+    font-weight: 300;
+    color: #6E6E6E;
+    font-size: 14px;
+}
+
 h1 {
   font-size: 40px;
   font-weight: 300;
   color: #DD1972;
   text-transform: uppercase;
   text-align: center;
+}
+
+h3 {
+  font-weight: 800;
+  color: #6E6E6E;
+  font-size: 16px;
 }
 
 .headline {
@@ -38,19 +50,15 @@ h1 {
   background-color: white;
 }
 
-.set-range-text {
-  font-weight: 700;
-  color: 404041;
-}
-
 label {
-  /*font-weight: 300;*/
   color: #6E6E6E;
+  font-size: 14px;
 }
 
 input {
   border: solid 1px;
   border-color: #D0D2D3;
+  width: 100%
 }
 
 .container {
@@ -121,6 +129,7 @@ main {
   margin: 10px;
   background-color: white;
   padding: 10px;
+  border: #D0D2D3 solid 2px;
 }
 
 .arena {
@@ -237,11 +246,79 @@ output {
   width: 50%;
   display: flex;
   justify-content: center;
+  background-color: #D0D2D3;
 }
 
 .number-word {
   font-weight: 800;
 }
+
+.result-card1 {
+  border: #D0D2D3 solid 2px;
+  text-align: center;
+  width: 90%;
+  background-color: #FFFFFF;
+  margin: 10px;
+  padding: 10px;
+  height: 170px;
+}
+
+.result-card-challenger-vs-names {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: #D0D2D3 solid 1px;
+  color: #6E6E6E;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.result-card-winner-name {
+  color: #6E6E6E;
+  font-weight: 700;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  border-top: #D0D2D3 solid 1px;
+  margin-top: 5px;
+  padding: 5px 3px;
+}
+
+li {
+  display: inline;
+  color: #6E6E6E;
+  font-weight: 700; 
+}
+
+.vs {
+  padding: 5px;
+  font-weight: 300;
+}
+
+.result-card-challenger-1-name {
+  padding: 5px;
+  font-weight: 700;
+  color: #6E6E6E;
+  font-size: 14px;
+}
+
+.result-card-challenger-2-name {
+  padding: 5px;
+  font-weight: 700;
+  color: #6E6E6E;
+  font-size: 14px;
+}
+
+.result-card-winner-text {
+  color: #6E6E6E;
+  font-weight: 300;
+}
+
+.result-guess-minutes-text {
+  font-weight: 300;
+}
+
 
 
 
