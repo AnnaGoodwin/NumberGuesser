@@ -47,15 +47,6 @@ submitButton.addEventListener('click', function () {
   challenger2GuessOutput.innerText = challenger2GuessInput.value;
 });
 
-// CLEAR BUTTON
-
-function ClearFields() {
-     document.getElementById("challenger1-name-input").value = "";
-     document.getElementById("challenger2-name-input").value = "";
-     document.getElementById("challenger1-guess-input").value = "";
-     document.getElementById("challenger2-guess-input").value = "";
-};
-
 // GENERATE NUMBER FUNCTIONS
 
 updateButton.addEventListener('click', generateNumberOnClick);
@@ -108,4 +99,30 @@ submitButton.addEventListener('click', function () {
   var challenger2NameOnCard = document.querySelector('.result-card-challenger-2-name');
   challenger1NameOnCard.innerText = challenger1NameInput.value;
   challenger2NameOnCard.innerText = challenger2NameInput.value;
+});
+
+// DISABLE BUTTONS
+
+var clearButton = document.getElementById('clear-button');
+var resetButton = document.getElementById('reset-button');
+
+challenger1NameInput.addEventListener('keyup', enableClearButton);
+challenger2NameInput.addEventListener('keyup', enableClearButton);
+challenger1GuessInput.addEventListener('keyup', enableClearButton);
+challenger2GuessInput.addEventListener('keyup', enableClearButton);
+
+function enableClearButton() {
+    clearButton.disabled = false;
+}
+
+clearButton.addEventListener('click', function() {
+  clearButton.disabled = true;
+})
+
+
+clearButton.addEventListener('click', function() {
+  document.getElementById("challenger1-name-input").value = "";
+  document.getElementById("challenger2-name-input").value = "";
+  document.getElementById("challenger1-guess-input").value = "";
+  document.getElementById("challenger2-guess-input").value = "";
 });
