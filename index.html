@@ -77,21 +77,23 @@
       </section>
     </main>
 
-    <output>
-      <div class="result-card1">
-        <div class="result-card-challenger-vs-names">
-          <p class="result-card-challenger-1-name">CHALLENGER 1 NAME </p>
-          <p class="vs"> vs </p> 
-          <p class="result-card-challenger-2-name"> CHALLENGER 2 NAME</p>
+    <output class="card-container">
+      <template class="result-card-template">
+        <div class="result-card">
+          <div class="result-card-challenger-vs-names">
+            <p class="result-card-challenger-1-name">CHALLENGER 1 NAME </p>
+            <p class="vs"> vs </p> 
+            <p class="result-card-challenger-2-name"> CHALLENGER 2 NAME</p>
+          </div>
+          <h2 class="result-card-winner-name">CHALLENGER 2 NAME</h2>
+          <h2 class="result-card-winner-text">WINNER</h2>
+          <ul>
+            <li>47 <span class="result-guess-minutes-text">GUESSES</span></li>
+            <li>1.35 <span class="result-guess-minutes-text">MINUTES</span></li>
+            <li><span class="result-guess-minutes-text">(x)</span></li>
+          </ul>
         </div>
-        <h2 class="result-card-winner-name">CHALLENGER 2 NAME</h2>
-        <h2 class="result-card-winner-text">WINNER</h2>
-        <ul>
-          <li>47 <span class="result-guess-minutes-text">GUESSES</span></li>
-          <li>1.35 <span class="result-guess-minutes-text">MINUTES</span></li>
-          <li><span class="result-guess-minutes-text">(x)</span></li>
-        </ul>
-      </div>
+      </template>
     </output>
   </div>
   </body>
