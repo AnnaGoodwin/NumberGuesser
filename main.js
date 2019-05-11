@@ -11,12 +11,24 @@ var minRangeInput = document.getElementById('min-range-input');
 var maxRangeInput = document.getElementById('max-range-input');
 var minRangeField = document.querySelector('.min-current-range');
 var maxRangeField = document.querySelector('.max-current-range');
+var form = document.querySelector('.set-range-feature');
 
-updateButton.addEventListener('click', function () {
+updateButton.addEventListener('click', inputRangeValues)
+
+function inputRangeValues() {
   event.preventDefault();
+  if (minRangeInput.value > maxRangeInput.value) {
+    form.classList.add('error-message-class');
+  var rangeError = document.createElement('p');
+  rangeError.innerText = "Your min range is greater than your max. Please adjust.";
+  rangeError.classList.add('error-range-text');
+  form.append(rangeError);
+  } else {
   minRangeField.innerText = minRangeInput.value;
   maxRangeField.innerText = maxRangeInput.value;
-});
+  }
+};
+
 
 // CHALLENGER NAME INPUTS/OUTPUTS
 
@@ -118,7 +130,6 @@ function enableClearButton() {
 clearButton.addEventListener('click', function() {
   clearButton.disabled = true;
 })
-
 
 clearButton.addEventListener('click', function() {
   document.getElementById("challenger1-name-input").value = "";

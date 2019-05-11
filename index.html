@@ -31,18 +31,18 @@
         <div class="arena">
           <p>The current Range is <span class="min-current-range">1</span> to <span class="max-current-range">100</span></p>
           <h3>Challenger 1</h3>
-          <div class="challengers">
+          <form class="challengers">
             <div class="name-inputs">
               <label>Name</label>
-              <input id="challenger1-name-input" class="challenger-name" type="text">
+              <input id="challenger1-name-input" class="challenger-name" required=true type="text">
             </div>
             <div class="guess-inputs">
               <label>Guess</label>
               <input id="challenger1-guess-input" class="challenger-guess" type="number">
             </div>
-          </div>
+          </form>
           <h3>Challenger 2</h3>
-          <div class="challengers">
+          <form class="challengers">
             <div class="name-inputs">
               <label>Name</label>
               <input id="challenger2-name-input" class="challenger-name" type="text">
@@ -51,7 +51,7 @@
               <label>Guess</label>
               <input id="challenger2-guess-input" class="challenger-guess" type="number">
             </div>
-          </div>
+          </form>
           <div class="challenger-guess-feature-buttons">
             <button class="submit-button" type="button">SUBMIT GUESS</button>
             <button id="reset-button" class="bottom-buttons" type="button" onClick="window.location.reload();">RESET GAME</button>
