@@ -96,6 +96,10 @@ main {
   border-color: #D0D2D3;
 }
 
+.error-message {
+  display: flex;
+}
+
 .error-message-class {
   border: red 3px solid;
 }

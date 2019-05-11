@@ -18,11 +18,13 @@ updateButton.addEventListener('click', inputRangeValues)
 function inputRangeValues() {
   event.preventDefault();
   if (minRangeInput.value > maxRangeInput.value) {
+    var errorMessage = 
+    `<div class="error-message">
+      <img src="images/error-icon (1).svg" width=15 height=15 alt='error message icon' />
+      <p class="error-range-text">Your min range is greater than your max. Please adjust.</p>
+    </div>`
     form.classList.add('error-message-class');
-  var rangeError = document.createElement('p');
-  rangeError.innerText = "Your min range is greater than your max. Please adjust.";
-  rangeError.classList.add('error-range-text');
-  form.append(rangeError);
+    form.innerHTML += errorMessage;
   } else {
   minRangeField.innerText = minRangeInput.value;
   maxRangeField.innerText = maxRangeInput.value;
