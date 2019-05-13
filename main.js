@@ -47,12 +47,6 @@ function inputRangeValues() {
 
 // CHALLENGER NAME INPUTS/OUTPUTS
 
-// submitButton.addEventListener('click', function () {
-  // event.preventDefault();
-  // challenger1NameOutput.innerText = challenger1NameInput.value;
-  // challenger2NameOutput.innerText = challenger2NameInput.value;
-// });
-
 function populateNameGuessOutputs() {
   challenger1NameOutput.innerText = challenger1NameInput.value;
   challenger2NameOutput.innerText = challenger2NameInput.value;
@@ -62,29 +56,8 @@ function populateNameGuessOutputs() {
 
 // CHALLENGER GUESS INPUTS/OUTPUTS
 
-// submitButton.addEventListener('click', function () {
-//   event.preventDefault();
-//   challenger1GuessOutput.innerText = challenger1GuessInput.value;
-//   challenger2GuessOutput.innerText = challenger2GuessInput.value;
-// });
 
 submitButton.addEventListener('click', returnSubmitError);
-
-// function returnSubmitError() {
-//   event.preventDefault();
-//   if(challenger1NameInput.value === "") {
-//     var errorMessage = 
-//     `<div class="error-message2">
-//       <img src="images/error-icon (1).svg" width=15 height=15 alt='error message icon' />
-//       <p class="error-text">Please enter values for all fields above.</p>
-//     </div>`
-//     challenger1NameInput.classList.add('error-message-class');
-//     challenger1NameInput.innerHTML += errorMessage;
-//   } else {
-//     populateNameGuessOutputs();
-//   }
-// }
-
 
 function returnSubmitError() {
   event.preventDefault();
@@ -100,7 +73,6 @@ function returnSubmitError() {
     populateNameGuessOutputs();
   }
 }
-
 
 // GENERATE NUMBER FUNCTIONS
 
@@ -122,7 +94,6 @@ submitButton.addEventListener('click', function () {
     challenger1Feedback.innerText = "That's too high";
   } else {
     challenger1Feedback.innerText = "BOOM!";
-    console.log(challenger1Name);
     addCard(challenger1NameInput.value);
   }});
 
@@ -163,6 +134,7 @@ challenger2GuessInput.addEventListener('keyup', enableClearButton);
 
 function enableClearButton() {
     clearButton.disabled = false;
+    resetButton.disabled = false;
 }
 
 clearButton.addEventListener('click', function() {
@@ -175,3 +147,6 @@ clearButton.addEventListener('click', function() {
   document.getElementById("challenger1-guess-input").value = "";
   document.getElementById("challenger2-guess-input").value = "";
 });
+
+resetButton.addEventListener('click', generateNumberOnClick);
+
