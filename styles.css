@@ -100,19 +100,26 @@ main {
   display: flex;
 }
 
-.error-message-class {
-  border: red 3px solid;
+.error-message2 {
+  display: flex;
+  align-items: flex-end;
+  width: 99%;
 }
 
-.error-range-text {
-  color: red;
+.error-message-class {
+  border: #DD1972 3px solid;
+}
+
+.error-text {
+  color: #DD1972;
 }
 
 .range-form {
   display: flex;
   justify-content: space-between;
-  /*flex-direction: column;*/
 }
+
+
 
 
 /*.wrapper {
@@ -142,6 +149,11 @@ main {
   background-color: white;
   padding: 10px;
   border: #D0D2D3 solid 2px;
+  display: block;
+}
+
+.error-message-class {
+  border: #DD1972 3px solid;
 }
 
 .arena {
@@ -181,6 +193,8 @@ main {
 .challenger-guess-feature-buttons {
   display: flex;
   justify-content: space-around;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
 .bottom-buttons {
