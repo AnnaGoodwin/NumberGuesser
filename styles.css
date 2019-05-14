@@ -170,6 +170,7 @@ button {
   border: 2px solid #D0D2D3;
   display: block;
   display: flex;
+  flex-direction: column;
   margin: 10px;
   padding: 10px;
 }
@@ -363,4 +364,13 @@ li {
 
 .result-guess-minutes-text {
   font-weight: 300;
+}
+
+.x-button {
+    border-radius: 50%;
+    width: 23px;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #6E6E6E;
+    color: #FFFFFF;
 }
