@@ -146,13 +146,6 @@ main {
   justify-content: space-between;
 }
 
-
-
-
-/*.wrapper {
-  display: flex;
-}*/
-
 .min-range,
 .max-range {
   display: flex;
@@ -166,6 +159,10 @@ main {
   background-color: #6E6E6E;
   color: #FFFFFF;
   width: 20%;
+}
+
+button:hover:enabled {
+  background-color: #DD1972;
 }
 
  /*CHALLENGER GUESS FEATURE*/

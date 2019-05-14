@@ -28,15 +28,21 @@ var resetButton = document.getElementById('reset-button');
 // EVENT LISTENERS
 
 updateButton.addEventListener('click', inputRangeValues)
+updateButton.addEventListener('click', inputRangeError)
 updateButton.addEventListener('click', generateNumberOnClick);
 submitButton.addEventListener('click', returnSubmitError);
 submitButton.addEventListener('click', addFeedback1AndWinner);
 submitButton.addEventListener('click', addFeedback2AndWinner);
-submitButton.addEventListener('click', populateNamesOnCard)
+submitButton.addEventListener('click', populateNamesOnCard);
+
+submitButton.addEventListener('click', challenger1GuessError);
+submitButton.addEventListener('click', challenger2GuessError);
+
 clearButton.addEventListener('click', disableButtons);
 resetButton.addEventListener('click', disableButtons);
 clearButton.addEventListener('click', clearFields);
 resetButton.addEventListener('click', generateNumberOnClick);
+resetButton.addEventListener('click', clearFields);
 challenger1NameInput.addEventListener('keyup', enableButtons);
 challenger2NameInput.addEventListener('keyup', enableButtons);
 challenger1GuessInput.addEventListener('keyup', enableButtons);
@@ -57,6 +63,19 @@ function inputRangeValues() {
   } else {
   minRangeField.innerText = minRangeInput.value;
   maxRangeField.innerText = maxRangeInput.value;
+  };
+};
+
+function inputRangeError() {
+  event.preventDefault();
+  if (minRangeInput.value === "" || maxRangeInput.value === "") {
+    var errorMessage = 
+    `<div class="error-message">
+      <img src="images/error-icon (1).svg" width=15 height=15 alt='error message icon' />
+      <p class="error-text">Please enter values for all fields above.</p>
+    </div>`
+    form.classList.add('error-message-class');
+    form.innerHTML += errorMessage;
   };
 };
 
@@ -83,6 +102,33 @@ function returnSubmitError() {
     challengerGuessField.innerHTML += errorMessage;
   } else {
     populateNameGuessOutputs();
+  };
+};
+
+function challenger1GuessError() {
+  event.preventDefault();
+  console.log('theo input', parseInt(challenger1GuessInput.value))
+  if(parseInt(challenger1GuessInput.value) < minRangeInput.value || parseInt(challenger1GuessInput.value) > maxRangeInput.value) {
+    var errorMessage = 
+    `<div class="error-message2">
+      <img src="images/error-icon (1).svg" width=15 height=15 alt='error message icon' />
+      <p class="error-text">Please enter values within the set range.</p>
+    </div>`
+    challengerGuessField.classList.add('error-message-class');
+    challengerGuessField.innerHTML += errorMessage;
+  };
+};
+
+function challenger2GuessError() {
+  event.preventDefault();
+  if(parseInt(challenger2GuessInput.value) < minRangeInput.value || parseInt(challenger2GuessInput.value) > maxRangeInput.value) {
+    var errorMessage = 
+    `<div class="error-message2">
+      <img src="images/error-icon (1).svg" width=15 height=15 alt='error message icon' />
+      <p class="error-text">Please enter values within the set range.</p>
+    </div>`
+    challengerGuessField.classList.add('error-message-class');
+    challengerGuessField.innerHTML += errorMessage;
   };
 };
 
@@ -137,7 +183,7 @@ function populateNamesOnCard() {
   challenger2NameOnCard.innerText = challenger2NameInput.value;
 };
 
-// DISABLE BUTTONS
+// BUTTONS
 
 function enableButtons() {
     clearButton.disabled = false;
@@ -155,4 +201,3 @@ function clearFields() {
   challenger1GuessInput.value = "";
   challenger2GuessInput.value = "";
 };
-
