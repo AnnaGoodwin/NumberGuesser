@@ -33,7 +33,9 @@ updateButton.addEventListener('click', generateNumberOnClick);
 submitButton.addEventListener('click', returnSubmitError);
 submitButton.addEventListener('click', addFeedback1AndWinner);
 submitButton.addEventListener('click', addFeedback2AndWinner);
-submitButton.addEventListener('click', populateNamesOnCard)
+submitButton.addEventListener('click', populateNamesOnCard);
+submitButton.addEventListener('click', challenger1GuessError);
+submitButton.addEventListener('click', challenger1GuessError);
 clearButton.addEventListener('click', disableButtons);
 resetButton.addEventListener('click', disableButtons);
 clearButton.addEventListener('click', clearFields);
@@ -100,6 +102,32 @@ function returnSubmitError() {
     populateNameGuessOutputs();
   };
 };
+
+function challenger1GuessError() {
+  event.preventDefault();
+  if(challenger1GuessInput.value < minRangeInput.value || challenger1GuessInput.value > maxRangeInput.value) {
+    var errorMessage = 
+    `<div class="error-message2">
+      <img src="images/error-icon (1).svg" width=15 height=15 alt='error message icon' />
+      <p class="error-text">Please enter values within the set range.</p>
+    </div>`
+    challengerGuessField.classList.add('error-message-class');
+    challengerGuessField.innerHTML += errorMessage;
+  }
+}
+
+function challenger2GuessError() {
+  event.preventDefault();
+  if(challenger2GuessInput.value < minRangeInput.value || challenger2GuessInput.value > maxRangeInput.value) {
+    var errorMessage = 
+    `<div class="error-message2">
+      <img src="images/error-icon (1).svg" width=15 height=15 alt='error message icon' />
+      <p class="error-text">Please enter values within the set range.</p>
+    </div>`
+    challengerGuessField.classList.add('error-message-class');
+    challengerGuessField.innerHTML += errorMessage;
+  }
+}
 
 // GENERATE NUMBER FUNCTIONS
 
@@ -170,4 +198,3 @@ function clearFields() {
   challenger1GuessInput.value = "";
   challenger2GuessInput.value = "";
 };
-
