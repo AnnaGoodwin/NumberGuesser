@@ -45,7 +45,7 @@ h3 {
   margin: auto;
   text-align: center;
   text-transform: uppercase;
-  width: 32%;
+  width: 50%;
 }
 
 .sub-headline:before {
@@ -64,7 +64,6 @@ h3 {
   margin: auto;
   position: relative;
   vertical-align: middle;
-  width: 8%;
 }
 
 .set-range-feature {
