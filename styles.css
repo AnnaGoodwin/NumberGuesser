@@ -4,34 +4,33 @@
 
 * {
   box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
   margin: 0px;
   padding: 0px;
-  font-family: 'Open Sans', sans-serif;
 }
 
 body {
-  border: solid 1px;
-  border-color: #6E6E6E;
+  border: 1px solid #6E6E6E;
 }
 
 p {
-    font-weight: 300;
     color: #6E6E6E;
     font-size: 14px;
+    font-weight: 300;
 }
 
 h1 {
+  color: #DD1972;
   font-size: 40px;
   font-weight: 300;
-  color: #DD1972;
-  text-transform: uppercase;
   text-align: center;
+  text-transform: uppercase;
 }
 
 h3 {
-  font-weight: 800;
   color: #6E6E6E;
   font-size: 16px;
+  font-weight: 800;
 }
 
 .headline {
@@ -44,13 +43,13 @@ h3 {
 }
 
 .sub-headline {
-  display: flex;
-  text-transform: uppercase;
   color: white;
+  display: flex;
   font-weight: 300;
-  text-align: center;
-  width: 32%;
   margin: auto;
+  text-align: center;
+  text-transform: uppercase;
+  width: 32%;
 }
 
 .sub-headline:before {
@@ -60,12 +59,13 @@ h3 {
 .sub-headline:after {
   left: 0.5em;
 }
-.sub-headline:before, .sub-headline:after {
-  content: "";
-  flex: 1 1;
+.sub-headline:before, 
+.sub-headline:after {
   border-bottom: 1px solid white;
-  margin: auto;
+  content: "";
   display: inline-block;
+  flex: 1 1;
+  margin: auto;
   position: relative;
   vertical-align: middle;
   width: 8%;
@@ -81,9 +81,8 @@ label {
 }
 
 input {
-  border: solid 1px;
-  border-color: #D0D2D3;
-  width: 100%
+  border: 1px solid #D0D2D3;
+  width: 100%;
 }
 
 .container {
@@ -114,13 +113,12 @@ main {
 }
 
 .set-range-feature {
+  border: 2px solid #D0D2D3;
   display: flex;
   flex-direction: column;
   height: 100px;
   margin: 10px;
   padding: 10px;
-  border: solid 2px;
-  border-color: #D0D2D3;
 }
 
 .error-message {
@@ -128,13 +126,13 @@ main {
 }
 
 .error-message2 {
-  display: flex;
   align-items: flex-end;
+  display: flex;
   width: 99%;
 }
 
 .error-message-class {
-  border: #DD1972 3px solid;
+  border: 3px solid #DD1972;
 }
 
 .error-text {
@@ -153,11 +151,11 @@ main {
 }
 
 .update-button {
-  border-radius: 35px;
-  padding: 6px;
-  font-weight: bold;
   background-color: #6E6E6E;
+  border-radius: 35px;
   color: #FFFFFF;
+  font-weight: bold;
+  padding: 6px;
   width: 20%;
 }
 
@@ -168,16 +166,16 @@ button:hover:enabled {
  /*CHALLENGER GUESS FEATURE*/
 
 .challenger-guess-feature {
+  background-color: white;
+  border: 2px solid #D0D2D3;
+  display: block;
   display: flex;
   margin: 10px;
-  background-color: white;
   padding: 10px;
-  border: #D0D2D3 solid 2px;
-  display: block;
 }
 
 .error-message-class {
-  border: #DD1972 3px solid;
+  border: 3px solid #DD1972;
 }
 
 .arena {
@@ -192,7 +190,7 @@ button:hover:enabled {
 
 .challengers {
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   padding-bottom: 10px;
 }
 
@@ -216,109 +214,109 @@ button:hover:enabled {
 
 .challenger-guess-feature-buttons {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   width: 100%;
-  flex-wrap: wrap;
 }
 
 .bottom-buttons {
-  border-radius: 35px;
-  padding: 6px;
-  font-weight: bold;
   background-color: #D0D2D3;
+  border-radius: 35px;
   color: #FFFFFF;
+  font-weight: bold;
+  padding: 6px;
   width: 25%;
 }
 
 .submit-button {
-  border-radius: 35px;
-  padding: 6px;
-  font-weight: bold;
   background-color: #6E6E6E;
+  border-radius: 35px;
   color: #FFFFFF;
+  font-weight: bold;
+  padding: 6px;
   width: 25%;
 }
 
 /*LATEST SCORE FEATURE*/
 
 .latest-score {
+  background-color: #FFFFFF;
+  border: 1px solid #D0D2D3;
   display: flex;
   flex-wrap: wrap;
   margin: 10px;
-  background-color: #FFFFFF;
   padding: 10px;
-  border: #D0D2D3 1px solid;
 }
 
 .latest-score-text {
-  width: 100%;
-  font-weight: 800;
   color: #6E6E6E;
   font-size: 16px;
+  font-weight: 800;
+  width: 100%;
 }
 
 .latest-score-left {
-  width: 50%;
   text-align: center;
+  width: 50%;
 }
 
 .latest-score-right {
-  width: 50%;
+  border-left: 1px solid #D0D2D3;
   text-align: center;
-  border-left: #D0D2D3 1px solid;
+  width: 50%;
 }
 
 .latest-score-names {
-  font-weight: 700;
-  font-size: 14px;
   color: #6E6E6E;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 .current-guess-text {
-  font-weight: 300;
-  font-size: 12px;
   color: #D0D2D3;
+  font-size: 12px;
+  font-weight: 300;
 }
 
 .challenger-latest-score {
+  color: #F74D9B;
   font-size: 48px;
   font-weight: 800;
-  color: #F74D9B;
 }
 
 .guess-responses {
-  font-weight: 300;
-  font-size: 13px;
   color: #D0D2D3;
+  font-size: 13px;
+  font-weight: 300;
 }
 
 output {
-  width: 50%;
+  align-items: center;
+  background-color: #D0D2D3;
   display: flex;
   flex-direction: column;
-  align-items: center;
   overflow: scroll;  
-  background-color: #D0D2D3;
+  width: 50%;
 }
 
 /*RESULT CARD*/
 
 .result-card {
-  border: #D0D2D3 solid 2px;
-  text-align: center;
-  width: 90%;
   background-color: #FFFFFF;
+  border: 2px solid #D0D2D3;
+  height: 170px;
   margin: 10px;
   padding: 10px;
-  height: 170px;
+  text-align: center;
+  width: 90%;
 }
 
 .result-card-challenger-vs-names {
-  display: flex;
-  justify-content: space-around;
-  border-bottom: #D0D2D3 solid 1px;
+  border-bottom: 1px solid #D0D2D3;
   color: #6E6E6E;
+  display: flex;
   font-weight: 700;
+  justify-content: space-around;
   margin-bottom: 5px;
 }
 
@@ -328,36 +326,36 @@ output {
 }
 
 ul {
+  border-top: 1px solid #D0D2D3;
   display: flex;
   justify-content: space-between;
-  border-top: #D0D2D3 solid 1px;
   margin-top: 5px;
   padding: 5px 3px;
 }
 
 li {
-  display: inline;
   color: #6E6E6E;
+  display: inline;
   font-weight: 700; 
 }
 
 .vs {
-  padding: 5px;
   font-weight: 300;
+  padding: 5px;
 }
 
 .result-card-challenger-1-name {
-  padding: 5px;
-  font-weight: 700;
   color: #6E6E6E;
   font-size: 14px;
+  font-weight: 700;
+  padding: 5px;
 }
 
 .result-card-challenger-2-name {
-  padding: 5px;
-  font-weight: 700;
   color: #6E6E6E;
   font-size: 14px;
+  font-weight: 700;
+  padding: 5px;
 }
 
 .result-card-winner-text {
