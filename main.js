@@ -107,7 +107,7 @@ function returnSubmitError() {
 updateButton.addEventListener('click', generateNumberOnClick);
 
 function generateNumberOnClick() {
-  random =  Math.ceil(Math.random() * (maxRangeInput.value - minRangeInput.value + 1));
+  random =  Math.floor(Math.random() * (Number(maxRangeInput.value) - Number(minRangeInput.value) + 1) ) + Number(minRangeInput.value);
   console.log(random);
   return random;
 };
