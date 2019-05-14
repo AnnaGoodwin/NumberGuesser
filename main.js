@@ -34,8 +34,10 @@ submitButton.addEventListener('click', returnSubmitError);
 submitButton.addEventListener('click', addFeedback1AndWinner);
 submitButton.addEventListener('click', addFeedback2AndWinner);
 submitButton.addEventListener('click', populateNamesOnCard);
+
 submitButton.addEventListener('click', challenger1GuessError);
-submitButton.addEventListener('click', challenger1GuessError);
+submitButton.addEventListener('click', challenger2GuessError);
+
 clearButton.addEventListener('click', disableButtons);
 resetButton.addEventListener('click', disableButtons);
 clearButton.addEventListener('click', clearFields);
@@ -105,7 +107,8 @@ function returnSubmitError() {
 
 function challenger1GuessError() {
   event.preventDefault();
-  if(challenger1GuessInput.value < minRangeInput.value || challenger1GuessInput.value > maxRangeInput.value) {
+  console.log('theo input', parseInt(challenger1GuessInput.value))
+  if(parseInt(challenger1GuessInput.value) < minRangeInput.value || parseInt(challenger1GuessInput.value) > maxRangeInput.value) {
     var errorMessage = 
     `<div class="error-message2">
       <img src="images/error-icon (1).svg" width=15 height=15 alt='error message icon' />
@@ -113,12 +116,12 @@ function challenger1GuessError() {
     </div>`
     challengerGuessField.classList.add('error-message-class');
     challengerGuessField.innerHTML += errorMessage;
-  }
-}
+  };
+};
 
 function challenger2GuessError() {
   event.preventDefault();
-  if(challenger2GuessInput.value < minRangeInput.value || challenger2GuessInput.value > maxRangeInput.value) {
+  if(parseInt(challenger2GuessInput.value) < minRangeInput.value || parseInt(challenger2GuessInput.value) > maxRangeInput.value) {
     var errorMessage = 
     `<div class="error-message2">
       <img src="images/error-icon (1).svg" width=15 height=15 alt='error message icon' />
@@ -126,8 +129,8 @@ function challenger2GuessError() {
     </div>`
     challengerGuessField.classList.add('error-message-class');
     challengerGuessField.innerHTML += errorMessage;
-  }
-}
+  };
+};
 
 // GENERATE NUMBER FUNCTIONS
 
@@ -180,7 +183,7 @@ function populateNamesOnCard() {
   challenger2NameOnCard.innerText = challenger2NameInput.value;
 };
 
-// DISABLE BUTTONS
+// BUTTONS
 
 function enableButtons() {
     clearButton.disabled = false;
