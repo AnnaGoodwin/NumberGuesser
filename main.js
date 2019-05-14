@@ -24,6 +24,7 @@ var cardTemplate = document.querySelector('.result-card-template');
 var cardArea = document.querySelector('.card-container');
 var clearButton = document.getElementById('clear-button');
 var resetButton = document.getElementById('reset-button');
+var container = document.querySelector('output');
 
 // EVENT LISTENERS
 
@@ -34,10 +35,8 @@ submitButton.addEventListener('click', returnSubmitError);
 submitButton.addEventListener('click', addFeedback1AndWinner);
 submitButton.addEventListener('click', addFeedback2AndWinner);
 submitButton.addEventListener('click', populateNamesOnCard);
-
 submitButton.addEventListener('click', challenger1GuessError);
 submitButton.addEventListener('click', challenger2GuessError);
-
 clearButton.addEventListener('click', disableButtons);
 resetButton.addEventListener('click', disableButtons);
 clearButton.addEventListener('click', clearFields);
@@ -107,7 +106,6 @@ function returnSubmitError() {
 
 function challenger1GuessError() {
   event.preventDefault();
-  console.log('theo input', parseInt(challenger1GuessInput.value))
   if(parseInt(challenger1GuessInput.value) < minRangeInput.value || parseInt(challenger1GuessInput.value) > maxRangeInput.value) {
     var errorMessage = 
     `<div class="error-message2">
@@ -170,10 +168,10 @@ function addFeedback2AndWinner() {
 
 function addCard(winner) {
   var clone = cardTemplate.content.cloneNode(true);
-  cardArea.prepend(clone);
-  var winnerField = document.querySelector('.result-card-winner-name');
+  var winnerField = clone.querySelector('.result-card-winner-name');
   winnerField.innerText = winner;
   console.log(winner);
+  cardArea.prepend(clone);
 };
 
 function populateNamesOnCard() {
@@ -201,3 +199,15 @@ function clearFields() {
   challenger1GuessInput.value = "";
   challenger2GuessInput.value = "";
 };
+
+container.addEventListener('click', function(e) {
+  console.log('output clicked')
+  if(e.target.classList.contains('x-button')) {
+    deleteCard(e);
+    console.log(e.target.classList);
+  }
+})
+
+function deleteCard(e) {
+  e.target.closest('.result-card').remove();
+}
