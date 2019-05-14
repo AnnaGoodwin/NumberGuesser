@@ -25,9 +25,24 @@ var cardArea = document.querySelector('.card-container');
 var clearButton = document.getElementById('clear-button');
 var resetButton = document.getElementById('reset-button');
 
-// MIN/MAX RANGE 
+// EVENT LISTENERS
 
 updateButton.addEventListener('click', inputRangeValues)
+updateButton.addEventListener('click', generateNumberOnClick);
+submitButton.addEventListener('click', returnSubmitError);
+submitButton.addEventListener('click', addFeedback1AndWinner);
+submitButton.addEventListener('click', addFeedback2AndWinner);
+submitButton.addEventListener('click', populateNamesOnCard)
+clearButton.addEventListener('click', disableButtons);
+resetButton.addEventListener('click', disableButtons);
+clearButton.addEventListener('click', clearFields);
+resetButton.addEventListener('click', generateNumberOnClick);
+challenger1NameInput.addEventListener('keyup', enableButtons);
+challenger2NameInput.addEventListener('keyup', enableButtons);
+challenger1GuessInput.addEventListener('keyup', enableButtons);
+challenger2GuessInput.addEventListener('keyup', enableButtons);
+
+// NAMED FUNCTION
 
 function inputRangeValues() {
   event.preventDefault();
@@ -42,7 +57,7 @@ function inputRangeValues() {
   } else {
   minRangeField.innerText = minRangeInput.value;
   maxRangeField.innerText = maxRangeInput.value;
-  }
+  };
 };
 
 // CHALLENGER NAME INPUTS/OUTPUTS
@@ -52,12 +67,9 @@ function populateNameGuessOutputs() {
   challenger2NameOutput.innerText = challenger2NameInput.value;
   challenger1GuessOutput.innerText = challenger1GuessInput.value;
   challenger2GuessOutput.innerText = challenger2GuessInput.value;
-}
+};
 
 // CHALLENGER GUESS INPUTS/OUTPUTS
-
-
-submitButton.addEventListener('click', returnSubmitError);
 
 function returnSubmitError() {
   event.preventDefault();
@@ -71,12 +83,10 @@ function returnSubmitError() {
     challengerGuessField.innerHTML += errorMessage;
   } else {
     populateNameGuessOutputs();
-  }
-}
+  };
+};
 
 // GENERATE NUMBER FUNCTIONS
-
-updateButton.addEventListener('click', generateNumberOnClick);
 
 function generateNumberOnClick() {
   random =  Math.ceil(Math.random() * (maxRangeInput.value - minRangeInput.value + 1));
@@ -86,7 +96,7 @@ function generateNumberOnClick() {
 
 // GUESS FEEDBACK
 
-submitButton.addEventListener('click', function () {
+function addFeedback1AndWinner() {
   event.preventDefault();
   if (challenger1GuessInput.value < random) {
     challenger1Feedback.innerText = "That's too low";
@@ -95,9 +105,10 @@ submitButton.addEventListener('click', function () {
   } else {
     challenger1Feedback.innerText = "BOOM!";
     addCard(challenger1NameInput.value);
-  }});
+  };
+};
 
-submitButton.addEventListener('click', function () {
+function addFeedback2AndWinner() {
   event.preventDefault();
   if (challenger2GuessInput.value < random) {
     challenger2Feedback.innerText = "That's too low";
@@ -106,7 +117,8 @@ submitButton.addEventListener('click', function () {
   } else {
     challenger2Feedback.innerText = "BOOM!";
     addCard(challenger2NameInput.value);
-  }});
+  };
+};
 
 // APPEND CARD with Names
 
@@ -117,36 +129,30 @@ function addCard(winner) {
   winnerField.innerText = winner;
   console.log(winner);
 };
-  
-submitButton.addEventListener('click', function () {
+
+function populateNamesOnCard() {
   var challenger1NameOnCard = document.querySelector('.result-card-challenger-1-name');
   var challenger2NameOnCard = document.querySelector('.result-card-challenger-2-name');
   challenger1NameOnCard.innerText = challenger1NameInput.value;
   challenger2NameOnCard.innerText = challenger2NameInput.value;
-});
+};
 
 // DISABLE BUTTONS
 
-challenger1NameInput.addEventListener('keyup', enableClearButton);
-challenger2NameInput.addEventListener('keyup', enableClearButton);
-challenger1GuessInput.addEventListener('keyup', enableClearButton);
-challenger2GuessInput.addEventListener('keyup', enableClearButton);
-
-function enableClearButton() {
+function enableButtons() {
     clearButton.disabled = false;
     resetButton.disabled = false;
-}
+};
 
-clearButton.addEventListener('click', function() {
+function disableButtons() {
   clearButton.disabled = true;
-})
+  resetButton.disabled = true;
+};
 
-clearButton.addEventListener('click', function() {
-  document.getElementById("challenger1-name-input").value = "";
-  document.getElementById("challenger2-name-input").value = "";
-  document.getElementById("challenger1-guess-input").value = "";
-  document.getElementById("challenger2-guess-input").value = "";
-});
-
-resetButton.addEventListener('click', generateNumberOnClick);
+function clearFields() {
+  challenger1NameInput.value = "";
+  challenger2NameInput.value = "";
+  challenger1GuessInput.value = "";
+  challenger2GuessInput.value = "";
+};
 
