@@ -168,6 +168,10 @@ main {
   width: 20%;
 }
 
+button:hover:enabled {
+  background-color: #DD1972;
+}
+
  /*CHALLENGER GUESS FEATURE*/
 
 .challenger-guess-feature {

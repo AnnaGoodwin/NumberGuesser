@@ -28,6 +28,7 @@ var resetButton = document.getElementById('reset-button');
 // EVENT LISTENERS
 
 updateButton.addEventListener('click', inputRangeValues)
+updateButton.addEventListener('click', inputRangeError)
 updateButton.addEventListener('click', generateNumberOnClick);
 submitButton.addEventListener('click', returnSubmitError);
 submitButton.addEventListener('click', addFeedback1AndWinner);
@@ -37,6 +38,7 @@ clearButton.addEventListener('click', disableButtons);
 resetButton.addEventListener('click', disableButtons);
 clearButton.addEventListener('click', clearFields);
 resetButton.addEventListener('click', generateNumberOnClick);
+resetButton.addEventListener('click', clearFields);
 challenger1NameInput.addEventListener('keyup', enableButtons);
 challenger2NameInput.addEventListener('keyup', enableButtons);
 challenger1GuessInput.addEventListener('keyup', enableButtons);
@@ -57,6 +59,19 @@ function inputRangeValues() {
   } else {
   minRangeField.innerText = minRangeInput.value;
   maxRangeField.innerText = maxRangeInput.value;
+  };
+};
+
+function inputRangeError() {
+  event.preventDefault();
+  if (minRangeInput.value === "" || maxRangeInput.value === "") {
+    var errorMessage = 
+    `<div class="error-message">
+      <img src="images/error-icon (1).svg" width=15 height=15 alt='error message icon' />
+      <p class="error-text">Please enter values for all fields above.</p>
+    </div>`
+    form.classList.add('error-message-class');
+    form.innerHTML += errorMessage;
   };
 };
 
