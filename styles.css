@@ -36,7 +36,7 @@ h3 {
 
 .headline {
   padding-top: 6px;
-  /*margin-top: 3px;*/
+  width: 100%;
 }
 
 .number-word {
@@ -44,10 +44,31 @@ h3 {
 }
 
 .sub-headline {
+  display: flex;
   text-transform: uppercase;
   color: white;
   font-weight: 300;
   text-align: center;
+  width: 32%;
+  margin: auto;
+}
+
+.sub-headline:before {
+  right: 0.5em;
+}
+
+.sub-headline:after {
+  left: 0.5em;
+}
+.sub-headline:before, .sub-headline:after {
+  content: "";
+  flex: 1 1;
+  border-bottom: 1px solid white;
+  margin: auto;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  width: 8%;
 }
 
 .set-range-feature {
@@ -67,7 +88,7 @@ input {
 
 .container {
   display: flex;
-  height: 100%;
+  height: 100vh;
 }
 
 header {
@@ -77,6 +98,12 @@ header {
   margin: auto;
   background-color: #404041;
 }
+
+/*.header-container {
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+}*/
 
 main {
   width: 50%;
