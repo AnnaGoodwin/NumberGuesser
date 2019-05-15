@@ -28,8 +28,8 @@ var container = document.querySelector('output');
 
 // EVENT LISTENERS
 
-updateButton.addEventListener('click', inputRangeValues)
-updateButton.addEventListener('click', inputRangeError)
+updateButton.addEventListener('click', inputRangeValues);
+updateButton.addEventListener('click', inputRangeError);
 updateButton.addEventListener('click', generateNumberOnClick);
 submitButton.addEventListener('click', returnSubmitError);
 submitButton.addEventListener('click', addFeedback1AndWinner);
@@ -47,7 +47,7 @@ challenger2NameInput.addEventListener('keyup', enableButtons);
 challenger1GuessInput.addEventListener('keyup', enableButtons);
 challenger2GuessInput.addEventListener('keyup', enableButtons);
 
-// NAMED FUNCTION
+// ERROR MESSAGES
 
 function inputRangeValues() {
   event.preventDefault();
@@ -77,17 +77,6 @@ function inputRangeError() {
     form.innerHTML += errorMessage;
   };
 };
-
-// CHALLENGER NAME INPUTS/OUTPUTS
-
-function populateNameGuessOutputs() {
-  challenger1NameOutput.innerText = challenger1NameInput.value;
-  challenger2NameOutput.innerText = challenger2NameInput.value;
-  challenger1GuessOutput.innerText = challenger1GuessInput.value;
-  challenger2GuessOutput.innerText = challenger2GuessInput.value;
-};
-
-// CHALLENGER GUESS INPUTS/OUTPUTS
 
 function returnSubmitError() {
   event.preventDefault();
@@ -130,7 +119,16 @@ function challenger2GuessError() {
   };
 };
 
-// GENERATE NUMBER FUNCTIONS
+// CHALLENGER NAME & GUESS INPUTS/OUTPUTS
+
+function populateNameGuessOutputs() {
+  challenger1NameOutput.innerText = challenger1NameInput.value;
+  challenger2NameOutput.innerText = challenger2NameInput.value;
+  challenger1GuessOutput.innerText = challenger1GuessInput.value;
+  challenger2GuessOutput.innerText = challenger2GuessInput.value;
+};
+
+// GENERATE NUMBER
 
 function generateNumberOnClick() {
   random =  Math.floor(Math.random() * (Number(maxRangeInput.value) - Number(minRangeInput.value) + 1) ) + Number(minRangeInput.value);
@@ -200,6 +198,8 @@ function clearFields() {
   challenger2GuessInput.value = "";
 };
 
+// EVENT DELEGATION
+
 container.addEventListener('click', function(e) {
   console.log('output clicked')
   if(e.target.classList.contains('x-button')) {
@@ -210,4 +210,4 @@ container.addEventListener('click', function(e) {
 
 function deleteCard(e) {
   e.target.closest('.result-card').remove();
-}
+};

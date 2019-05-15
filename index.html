@@ -5,12 +5,13 @@
     </title>
     <link href="styles.css" type="text/css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
   </head>
   <body>
     <header>
       <h1 class="headline">
-        <span class="number-word">Number</span>
-        Guesser
+        <span class="number-word">Number</span>Guesser
       </h1>
       <p class="sub-headline">
         Ultimate Challenger Edition
@@ -42,8 +43,8 @@
         </section>
         <section class="challenger-guess-feature">
           <div class="arena">
-            <p>
-              The current Range is
+            <p class="current-range">
+              The Current Range is
               <span class="min-current-range">1</span>
               to
               <span class="max-current-range">100</span>
@@ -75,7 +76,7 @@
               </div>
             </form>
             <div class="challenger-guess-feature-buttons">
-              <button class="submit-button" type="button">SUBMIT GUESS</button>
+              <button class="submit-button bottom-buttons" type="button">SUBMIT GUESS</button>
               <button id="reset-button" class="bottom-buttons" type="button" disabled="true">RESET GAME</button>
               <button id="clear-button" class="bottom-buttons" type="button" disabled="true">CLEAR GAME</button>
             </div>
@@ -86,17 +87,17 @@
             Latest Score
           </h3>
           <div class="latest-score-left">
-          <p id="challenger1-name-output" class="latest-score-names">
-            Challenger 1 Name
-          </p>
-          <p class="current-guess-text">
-            current guess
-          </p>
-          <h1 class="challenger-latest-score" id="challenger1-guess-output">
-            -
-          </h1>
-          <p id="guess-response1" class="guess-responses">
-          </p>  
+            <p id="challenger1-name-output" class="latest-score-names">
+              Challenger 1 Name
+            </p>
+            <p class="current-guess-text">
+              current guess
+            </p>
+            <h1 class="challenger-latest-score" id="challenger1-guess-output">
+              -
+            </h1>
+            <p id="guess-response1" class="guess-responses">
+            </p>  
           </div>
           <div class="latest-score-right">
             <p id="challenger2-name-output" class="latest-score-names">
