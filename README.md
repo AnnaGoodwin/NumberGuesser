@@ -18,9 +18,9 @@ Using HTML, CSS, and JavaScript, the application window responds to resizing dow
 
 ![Mobile1](https://user-images.githubusercontent.com/19739235/57815276-fb9e3e00-7733-11e9-8301-9c0351db1273.png)
 
-![Mobile2]((https://user-images.githubusercontent.com/19739235/57815288-078a0000-7734-11e9-9875-256b11143b71.png)
+![Mobile2](https://user-images.githubusercontent.com/19739235/57815288-078a0000-7734-11e9-9875-256b11143b71.png)
 
-![Mobile3]((https://user-images.githubusercontent.com/19739235/57815294-12449500-7734-11e9-8827-24a7cd00533e.png)
+![Mobile3](https://user-images.githubusercontent.com/19739235/57815294-12449500-7734-11e9-8827-24a7cd00533e.png)
 
 ## Features:
 - Ability to change minimum and maximum range.
