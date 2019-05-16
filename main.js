@@ -1,6 +1,7 @@
 // GLOBAL VARIABLES
 
 var random =  Math.ceil(Math.random() * (100 - 1));
+var counter = 0;
 console.log(random);
 var updateButton = document.querySelector('.update-button');
 var minRangeInput = document.getElementById('min-range-input');
@@ -90,6 +91,7 @@ function returnSubmitError() {
     challengerGuessField.innerHTML += errorMessage;
   } else {
     populateNameGuessOutputs();
+    counter++;
   };
 };
 
@@ -166,16 +168,21 @@ function addFeedback2AndWinner() {
 
 function addCard(winner) {
   var clone = cardTemplate.content.cloneNode(true);
+  var guessCount = clone.getElementById('guess-count');
   var winnerField = clone.querySelector('.result-card-winner-name');
   winnerField.innerText = winner;
   cardArea.prepend(clone);
+    guessCount.innerText = counter;
+    counter = 0;
 };
 
 function populateNamesOnCard() {
   var challenger1NameOnCard = document.querySelector('.result-card-challenger-1-name');
   var challenger2NameOnCard = document.querySelector('.result-card-challenger-2-name');
+  if (challenger1NameOnCard) {
   challenger1NameOnCard.innerText = challenger1NameInput.value;
   challenger2NameOnCard.innerText = challenger2NameInput.value;
+  }
 };
 
 // BUTTONS
