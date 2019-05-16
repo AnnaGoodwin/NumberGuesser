@@ -80,7 +80,7 @@ function inputRangeError() {
 
 function returnSubmitError() {
   event.preventDefault();
-  if(challenger1NameInput.value === "" || challenger2NameInput.value === "" || challenger1GuessInput.value === "" || challenger2GuessInput.value === "") {
+  if (challenger1NameInput.value === "" || challenger2NameInput.value === "" || challenger1GuessInput.value === "" || challenger2GuessInput.value === "") {
     var errorMessage = 
     `<div class="error-message2">
       <img src="images/error-icon (1).svg" width=15 height=15 alt='error message icon' />
@@ -95,7 +95,7 @@ function returnSubmitError() {
 
 function challenger1GuessError() {
   event.preventDefault();
-  if(parseInt(challenger1GuessInput.value) < minRangeInput.value || parseInt(challenger1GuessInput.value) > maxRangeInput.value) {
+  if (parseInt(challenger1GuessInput.value) < minRangeInput.value || parseInt(challenger1GuessInput.value) > maxRangeInput.value) {
     var errorMessage = 
     `<div class="error-message2">
       <img src="images/error-icon (1).svg" width=15 height=15 alt='error message icon' />
@@ -108,7 +108,7 @@ function challenger1GuessError() {
 
 function challenger2GuessError() {
   event.preventDefault();
-  if(parseInt(challenger2GuessInput.value) < minRangeInput.value || parseInt(challenger2GuessInput.value) > maxRangeInput.value) {
+  if (parseInt(challenger2GuessInput.value) < minRangeInput.value || parseInt(challenger2GuessInput.value) > maxRangeInput.value) {
     var errorMessage = 
     `<div class="error-message2">
       <img src="images/error-icon (1).svg" width=15 height=15 alt='error message icon' />
@@ -168,7 +168,6 @@ function addCard(winner) {
   var clone = cardTemplate.content.cloneNode(true);
   var winnerField = clone.querySelector('.result-card-winner-name');
   winnerField.innerText = winner;
-  console.log(winner);
   cardArea.prepend(clone);
 };
 
@@ -201,12 +200,10 @@ function clearFields() {
 // EVENT DELEGATION
 
 container.addEventListener('click', function(e) {
-  console.log('output clicked')
-  if(e.target.classList.contains('x-button')) {
+  if (e.target.classList.contains('x-button')) {
     deleteCard(e);
-    console.log(e.target.classList);
-  }
-})
+  };
+});
 
 function deleteCard(e) {
   e.target.closest('.result-card').remove();
