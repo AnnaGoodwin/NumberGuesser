@@ -1,4 +1,4 @@
-/*GENERAL ELEMENTS*/
+/*GENERAL ELEMENTS & CONTAINERS*/
 
 * {
   box-sizing: border-box;
@@ -11,14 +11,8 @@ body {
   height: 100%;
 }
 
-p {
-    color: #6E6E6E;
-    font-size: 14px;
-    font-weight: 300;
-}
-
 h1 {
-  color: #DD1972;
+  color: #F74D9B;
   font-size: 40px;
   font-weight: 300;
   text-align: center;
@@ -27,16 +21,57 @@ h1 {
 
 h3 {
   color: #6E6E6E;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 800;
   margin-bottom: 5px;
 }
 
+p {
+    color: #6E6E6E;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+main {
+  background-color: #F7F7F7;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  width: 50%;
+}
+
+label {
+  color: #6E6E6E;
+  font-size: 17px;
+  margin-bottom: 5px;
+}
+
+input {
+  border: 1px solid #D0D2D3;
+  margin-bottom: 13px;
+  padding: 10px;
+  width: 100%;
+}
+
 /*HEADER*/
 
-.headline {
-  padding-top: 6px;
+header {
+  background-color: #404041;
+  height: 165px;
+  margin: auto;
+  text-align: center;
   width: 100%;
+}
+
+.headline {
+  padding-top: 24px;
+  width: 100%;
+  font-size: 58px;
 }
 
 .number-word {
@@ -46,11 +81,12 @@ h3 {
 .sub-headline {
   color: white;
   display: flex;
+  font-size: 19px;
   font-weight: 300;
   margin: auto;
   text-align: center;
   text-transform: uppercase;
-  width: 335px;
+  width: 475px;
 }
 
 .sub-headline:before {
@@ -60,6 +96,7 @@ h3 {
 .sub-headline:after {
   left: 0.5em;
 }
+
 .sub-headline:before, 
 .sub-headline:after {
   border-bottom: 1px solid white;
@@ -71,46 +108,15 @@ h3 {
   vertical-align: middle;
 }
 
-label {
-  color: #6E6E6E;
-  font-size: 14px;
-}
-
-input {
-  border: 1px solid #D0D2D3;
-  margin-bottom: 10px;
-  padding: 4px;
-  width: 100%;
-}
-
-.container {
-  display: flex;
-  height: 100vh;
-}
-
-header {
-  background-color: #404041;
-  height: 100px;
-  margin: auto;
-  text-align: center;
-  width: 100%;
-}
-
-main {
-  background-color: #F7F7F7;
-  display: flex;
-  flex-direction: column;
-  height: fit-content;
-  width: 50%;
-}
+/*SET RANGE FEATURE*/
 
 .set-range-feature {
   border: 2px solid #D0D2D3;
   background-color: white;
   display: flex;
   flex-direction: column;
-  margin: 10px;
-  padding: 10px;
+  margin: 15px;
+  padding: 13px;
 }
 
 .range-form {
@@ -130,7 +136,8 @@ main {
   border-radius: 35px;
   color: #FFFFFF;
   font-weight: bold;
-  width: 20%;
+  margin-bottom: 11px;
+  width: 25%;
 }
 
 button:hover:enabled {
@@ -140,7 +147,7 @@ button:hover:enabled {
 button {
   align-items: center;
   display: flex;
-  font-size: 14px;
+  font-size: 16px;
   height: 4vh;
   justify-content: center;
   padding: 0;
@@ -155,8 +162,8 @@ button {
   display: block;
   display: flex;
   flex-direction: column;
-  margin: 10px;
-  padding: 10px;
+  margin: 15px;
+  padding: 13px;
 }
 
 .arena {
@@ -202,7 +209,7 @@ button {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin-bottom: 12px;
+  margin-bottom: 20px;
   width: 100%;
 }
 
@@ -211,7 +218,7 @@ button {
   border-radius: 35px;
   color: #FFFFFF;
   font-weight: bold;
-  width: 26%;
+  width: 28%;
 }
 
 .submit-button {
@@ -219,7 +226,7 @@ button {
   border-radius: 35px;
   color: #FFFFFF;
   font-weight: bold;
-  width: 30%;
+  width: 32%;
 }
 
 /*LATEST SCORE FEATURE*/
@@ -229,13 +236,13 @@ button {
   border: 1px solid #D0D2D3;
   display: flex;
   flex-wrap: wrap;
-  margin: 10px;
-  padding: 10px;
+  margin: 15px;
+  padding: 13px;
 }
 
 .latest-score-text {
   color: #6E6E6E;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 800;
   margin-bottom: 10px;
   width: 100%;
@@ -244,36 +251,42 @@ button {
 .latest-score-left {
   text-align: center;
   width: 50%;
+  margin-bottom: 10px;
 }
 
 .latest-score-right {
   border-left: 1px solid #D0D2D3;
   text-align: center;
   width: 50%;
+  margin-bottom: 10px;
+
 }
 
 .latest-score-names {
   color: #6E6E6E;
-  font-size: 14px;
+  font-size: 17px;
   font-weight: 700;
+  margin-bottom: 5px;
 }
 
 .current-guess-text {
-  color: #D0D2D3;
-  font-size: 12px;
+  color: #6E6E6E;
+  font-size: 16px;
   font-weight: 300;
 }
 
 .challenger-latest-score {
   color: #F74D9B;
-  font-size: 48px;
+  font-size: 72px;
   font-weight: 800;
+  margin-bottom: 10px;
 }
 
 .guess-responses {
-  color: #D0D2D3;
-  font-size: 13px;
+  color: #6E6E6E;
+  font-size: 16px;
   font-weight: 300;
+  margin-bottom: 10px;
 }
 
 /*ERROR MESSAGES*/
@@ -312,12 +325,12 @@ output {
 
 .result-card {
   background-color: #FFFFFF;
-  border: 2px solid #D0D2D3;
-  height: 170px;
-  margin: 10px;
+  height: 200px;
+  margin: 15px;
   padding: 10px;
   text-align: center;
   width: 90%;
+  border: 1px solid #6E6E6E
 }
 
 .result-card-challenger-vs-names {
@@ -325,13 +338,15 @@ output {
   color: #6E6E6E;
   display: flex;
   font-weight: 700;
-  justify-content: space-around;
+  justify-content: center;
   margin-bottom: 5px;
 }
 
 .result-card-winner-name {
   color: #6E6E6E;
-  font-weight: 700;
+  font-size: 38px;
+  font-weight: 800;
+  margin-top: 10px;
 }
 
 ul {
@@ -339,7 +354,7 @@ ul {
   display: flex;
   justify-content: space-between;
   margin-top: 5px;
-  padding: 5px 3px;
+  padding: 10px 5px;
 }
 
 li {
@@ -355,24 +370,35 @@ li {
 
 .result-card-challenger-1-name {
   color: #6E6E6E;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 700;
-  padding: 5px;
+  margin-right: 40px;
+  padding-bottom: 3px;
 }
 
 .result-card-challenger-2-name {
   color: #6E6E6E;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 700;
-  padding: 5px;
+  margin-left: 40px;
+  padding-bottom: 3px;
 }
 
 .result-card-winner-text {
   color: #6E6E6E;
   font-weight: 300;
+  margin-bottom: 15px
 }
 
-.result-guess-minutes-text {
+.result-guess-text {
+  font-weight: 300;
+}
+
+.result-minutes-text {
+  margin-left: -60px;
+}
+
+.minutes {
   font-weight: 300;
 }
 
@@ -388,7 +414,7 @@ li {
 
 /*MEDIA QUERIES*/
 
-@media (max-width: 830px) {
+@media (max-width: 950px) {
   .container {
     display: block;
     height: 66vh;
@@ -402,9 +428,21 @@ li {
     border-left: none;
     width: 100%;
   }
+
+  .result-card-challenger-vs-names {
+    justify-content: space-around;
+  }
+
+  .result-card-challenger-1-name {
+    margin: 0;
+  }
+
+  .result-card-challenger-2-name {
+    margin: 0;
+  }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 560px) {
   .range-form {
     display: block;
   }
@@ -453,22 +491,34 @@ li {
   }
 
   .headline {
-    font-size: 32px;
-    padding-top: 15px;
+    font-size: 34px;
+    padding-top: 47px;
   }
 
   .sub-headline {
-    font-size: 13px;
-    width: 260px;
+    font-size: 14px;
+    width: 275px;
   }
 
   .latest-score-left {
-    padding-bottom: 7px;
+    padding-bottom: 10px;
   }
 
   .latest-score-right {
     border-left: none;
     border-top: 1px solid #D0D2D3;
-    padding-top: 7px;
+    padding-top: 10px;
+  }
+
+  .latest-score-names {
+    margin-top: 5px;
+  }
+
+  .result-minutes-text {
+    margin-left: -30px;
+  }
+
+  ul {
+    font-size: 12px;
   }
 }

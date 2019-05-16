@@ -6,12 +6,12 @@
     <link href="styles.css" type="text/css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
   </head>
   <body>
     <header>
       <h1 class="headline">
-        <span class="number-word">Number</span>Guesser
+        <span class="number-word">
+          Number</span>Guesser
       </h1>
       <p class="sub-headline">
         Ultimate Challenger Edition
@@ -54,11 +54,15 @@
             </h3>
             <form class="challengers">
               <div class="name-inputs">
-                <label>Name</label>
+                <label>
+                  Name
+                </label>
                 <input id="challenger1-name-input" class="challenger-name" required=true type="text">
               </div>
               <div class="guess-inputs">
-                <label>Guess</label>
+                <label>
+                  Guess
+                </label>
                 <input id="challenger1-guess-input" class="challenger-guess" type="number">
               </div>
             </form>
@@ -67,18 +71,28 @@
             </h3>
             <form class="challengers">
               <div class="name-inputs">
-                <label>Name</label>
+                <label>
+                  Name
+                </label>
                 <input id="challenger2-name-input" class="challenger-name" type="text">
               </div>
               <div class="guess-inputs">
-                <label>Guess</label>
+                <label>
+                  Guess
+                </label>
                 <input id="challenger2-guess-input" class="challenger-guess" type="number">
               </div>
             </form>
             <div class="challenger-guess-feature-buttons">
-              <button class="submit-button bottom-buttons" type="button">SUBMIT GUESS</button>
-              <button id="reset-button" class="bottom-buttons" type="button" disabled="true">RESET GAME</button>
-              <button id="clear-button" class="bottom-buttons" type="button" disabled="true">CLEAR GAME</button>
+              <button class="submit-button bottom-buttons" type="button">
+                SUBMIT GUESS
+              </button>
+              <button id="reset-button" class="bottom-buttons" type="button" disabled="true">
+                RESET GAME
+              </button>
+              <button id="clear-button" class="bottom-buttons" type="button" disabled="true">
+                CLEAR GAME
+              </button>
             </div>
           </div>
         </section>
@@ -136,15 +150,17 @@
               </h2>
               <ul>
                 <li>
-                  47
-                  <span class="result-guess-minutes-text">
+                  #
+                  <span class="result-guess-text">
                     GUESSES
                   </span>
                 </li>
                 <li>
-                 1.35
-                 <span class="result-guess-minutes-text">
-                   MINUTES
+                 <span class="result-minutes-text">
+                   # 
+                   <span class="minutes">
+                    MINUTES
+                   </span>
                  </span>
                </li>
                <button class="x-button">
